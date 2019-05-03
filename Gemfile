@@ -14,6 +14,6 @@ gem 'github-pages'
 group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-sitemap'
-  gem 'jekyll-algolia', '1.0.1'k
+  gem 'jekyll-algolia', '1.0.1'
 end
 
