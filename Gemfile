@@ -10,12 +10,10 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem 'github-pages'
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
 
 group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   gem 'jekyll-sitemap'
-  gem 'jekyll-algolia', '1.0.1'
+  gem 'jekyll-algolia', '1.0.1'k
 end
 
