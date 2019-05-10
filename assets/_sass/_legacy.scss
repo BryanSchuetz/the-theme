@@ -1,0 +1,297 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, ol, dl{
+  margin-left: 2rem;
+  li{
+    list-style-position: outside;
+  }
+}
+div{
+  display: block;
+  width: 100%;
+}
+
+/*
+@todo Pull in all the legacy css from dai.com. We'll need all the components necessary to style the:
+
+* Header
+  * SVGs
+  * Search
+  * Navbar
+  * Utility Bar
+* Footer
+* Overall Grid
+
+Classes to pul: wrapper, #header, header-utility_nav, header-site_nav, header-inner, header-nav, header-inner--wrap, header-inner--logo, header-nav--main
+
+*/ 
+
+.wrapper{
+  @include clearfix;
+}
+body.st-ui-overlay-active{
+  overflow: visible !important;
+}
+.container, .header-inner, .footer-inner{
+  @include width(4);
+  margin: auto;
+  @include responsive(small-screens){
+    @include width(6);
+  }
+  @include responsive(medium-screens){
+    @include width(8);
+  }
+  @include responsive(wide-screens){
+    @include width(10);
+  }
+  @include responsive(ultra-wide-screens){
+    @include width(12);
+  }
+}
+.promos .container, .promos .header-inner, .promos .footer-inner, .country .container, .country .header-inner, .country .footer-inner{
+    @include responsive(extra-ultra-wide-screens){
+      @include width(14)
+    }
+}
+
+
+// 🎌 HEADER 🎌
+
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.header-nav{
+  @include clearfix;
+  float: left;
+  margin: 0;
+  li{
+    list-style-type: none;
+    float: left;
+    font-size: .8rem;
+    // fix temp-height
+    a{
+      color: $nav_links;
+    }
+    a:hover{
+    color: lighten($nav_links, 10%);
+    text-decoration: none;
+    }
+  }
+  li::after{
+      content: '\00a0\00a0/\00a0\00a0 ';
+  }
+  li:last-child::after{
+  content: '';
+  }
+}
+.header-inner {
+  @include clearfix;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+// 🎌 HEADER: UTILITY NAVIGATION 🎌
+.st-ui-injected-overlay-container *:not(select){
+  font-family: 'proxima-nova', helvetica, arial, sans-serif !important;
+  .st-ui-header input[type="text"]:focus{
+    border-bottom: 2px solid $link-green !important;
+  }
+}
+.st-ui-pagination-link{
+  color: $link-green !important;
+}
+.st-ui-arrow{
+  border-color: $link-green !important;
+}
+.st-default-search-input.header-search{
+  display: none;
+  font-family: 'proxima-nova', helvetica, arial, sans-serif;
+  background-color: $nav-gray;
+  font-size: .7rem;
+  height: .7rem;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+  border-style: solid;
+  @include responsive(small-screens){
+    float: right;
+    width: 4rem;
+    padding-left: .5rem;
+  }
+  @include responsive(medium-screens){
+    display: block;
+    padding-left: 1.5rem;
+    background-size: .7rem;
+    background-position: .4rem .4rem;
+    width: 5rem;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA%2FN0AAINkAABw6AAA7GgAADA%2BAAAQkOTsmeoAAAIKSURBVHjatNbPi81RGMfx1x0zio3yKzOLiSLyK1OzYEpSczYUycbCQk3DJAsxZGejWSGh%2FFr5AyxQlJOkCZPFSGlKxmzMj0SymBoLZmzOrdPN%2Fd57p%2FFZnc%2Fz7fT%2BPs85z%2FP9lrq7u1XRahxEJ1rxC1MYxmP8gBijetRcBXARvWipsm8GNzGAn%2FWAmir8LrzHyQIILME5DIcQtjUK2osXWJPFXuIMDqQynseb7Pk6DIYQttQCldIZrcKHVDaYxNEE%2Fpf24T5WJj%2BKjhjjdK2MLmWQcewsgMATdOFb8utxoVbpluNYFuvBlzrK%2FimdZVl9IYSWItB%2BLE5%2BCM%2FUrwcYSesV2F0E2p75hxrTHB5lvrMI1Jb5zxrXaLZuLQL9zvyieYDypp8tAk1mftM8QBuz9UQRaDjzh1FqMJtDmX9dBHqKcqNtxZEGQD1Ym2Xztgg0jRtZ7BZ21AHpwtXMX4sxztaaDAP4mNbLMJjetqlKuU7hOZam2Fdcr2fWlcfIUGq8ssZSn4yls9uQBmx7RS%2BVcBd9Mca5WiDYnLq93ts3VdE7VWGVpRlBB%2FrxvQAwnuZcO65k8eO4HUIo1cooVwv2pLHSlj7lE3iHV%2FhT%2FpSHEC7jbLb3Hk7kmRWB6lL5n6EWrMkCKcbYX1HGXtwpl3HBQLVgCwoqgi04qApsptl%2FUoyxP4RQvr2n%2Fw4AIvqLpmbxnMcAAAAASUVORK5CYII%3D);
+  }
+  @include responsive(wide-screens){
+    width: 10rem;
+  }
+}
+.st-ui-stamp{
+  display:none !important;
+}
+.header-utility_nav{
+  background-color: $slate;
+  height: 32px;
+  @include responsive(small-screens){
+    height: 44px;
+  }
+  @include responsive(medium-screens){
+    height: 59.188px;
+  }
+  @include responsive(wide-screens){
+    height: 64.594px;
+  }
+}
+// 🎌 HEADER: PRIMARY NAVIGATION 🎌
+
+.header-site_nav{
+  background-color: $nav_gray;
+  border-bottom: 1px solid lighten($slate, 60%);
+}
+.logo{
+  float: left;
+  height: 1rem;
+  width: 56px;
+  position: relative;
+  top: .04rem;
+  margin-right: 1rem;
+  @include responsive(small-screens){
+    top: .02rem;
+  }
+  @include responsive(medium-screens){
+    height: 1.5rem;
+    width: 96px;
+  }
+  @include responsive(wide-screens){
+    width: 108px;
+  }
+}
+.header-inner--logo{
+  display: block;
+  float: left;
+}
+.header-nav--main{
+  @include clearfix;
+}
+.header-nav--main{
+  display: block;
+  margin: 0;
+  li{
+    list-style-type: none;
+    float: left;
+    margin-left: .4rem;
+    margin-right: .4rem;
+    @include responsive(medium-screens){
+      margin-left: .4rem;
+      margin-right: .4rem;
+    }
+    @include responsive(medium-screens){
+      margin-left: .4rem;
+      margin-right: .4rem;
+    }
+    @include responsive(ultra-wide-screens){
+      margin-right: .8rem;
+      margin-left: .8rem;
+    }
+    a{
+      font-weight: bold;
+      color: $nav_links-main;
+    }
+    a:hover{
+      color: $nav_links-main--current;
+      text-decoration: none;
+    }
+    a.active{
+      color: $nav_black;
+    }
+  }
+  .current a{
+    color: $nav_links-main--current;
+  }
+}
+.header-nav-li--tiered{
+  display: none;
+  @include responsive(wide-screens){
+    display: block;
+  }
+}
+ul.dropdown{
+  visibility: hidden;
+  opacity: 0;
+  margin-top: -3px;
+  transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+  list-style-type: none;
+  position: absolute;
+  margin-left: 0;
+  padding: 1rem 0 0 0;
+  // border-left: 1px solid lighten($slate, 60%);
+  background-color: $nav_gray;
+  width: 100px;
+  @include responsive(small-screens){
+    width: 150px;
+  }
+  @include responsive(medium-screens){
+    width: 175px;
+  }
+  @include responsive(wide-screens){
+    width: 200px;
+  }
+  @include responsive(ultra-wide-screens){
+    width: 225px;
+  }
+  box-shadow: -5px 5px 5px rgba($nav-black, 0.1);
+  li{
+    float: left;
+    clear: right;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid rgba($slate, 0.05);
+    a{
+      color: $nav_links_main;
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+    }
+    &:hover{
+      background-color: lighten($nav_links_main, 20%);
+      cursor: pointer;
+      a{
+      color: $nav_black;
+      } 
+    }
+    &.active{
+      background-color: lighten($nav_links_main, 20%);
+      cursor: pointer;
+      a{
+      color: $nav_black;
+      } 
+    }
+  }
+}
+
+li.has-dropdown:hover ul.dropdown{
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+  transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+}
+li.has-dropdown:hover > a{
+  color: $nav_black;
+}

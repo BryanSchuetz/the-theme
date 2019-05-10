@@ -1,0 +1,70 @@
+
+// 🎌 Variables 🎌
+
+
+// 🎌 Weights 🎌
+/*
+thin: 100
+light: 300
+regular: 400
+bold: 700
+black: 900
+
+*/
+// Colors
+$emphasis: #313437;
+$nav_black: #1c242b;
+$nav_gray: #f2f0ed;
+$link_green: #74BC70;
+$nav_links: #c8c6c2;
+$nav_links-main: #aaa7a2;
+$nav_links-main--current: #323940;
+$slate: #303B40;
+$nav_links-footer--blue: #8FC3EA;
+$button-green: rgb(116, 188, 112);
+$text-white: rgb(255, 255, 255);
+$node-nav--inactive: #c8c6c2;
+
+// Widths
+$width-tiny: 240px; //4bits
+$width-small: 480px; //6bits
+$width-medium: 600px; //8bits
+$width-wide: 800px; //10bits
+$width-ultra-wide: 960px; //12bits
+$width-extra-ultra-wide: 1400px;
+
+// 🎌 MIXINS 🎌
+
+// Responsive mixin for bubbled media-querries
+@mixin responsive($width){
+  @if $width == tiny-screens{
+    @media screen and (min-width: $width-tiny){
+      @content;
+    }
+  }
+  @else if $width == small-screens{
+    @media screen and (min-width: $width-small){
+      @content;
+    }
+  }
+  @else if $width == medium-screens{
+    @media screen and (min-width: $width-medium){
+      @content;
+    }
+  }
+  @else if $width == wide-screens{
+    @media screen and (min-width: $width-wide){
+      @content;
+    }
+  }
+  @else if $width == ultra-wide-screens{
+    @media screen and (min-width: $width-ultra-wide){
+      @content;
+    }
+  }
+    @else if $width == extra-ultra-wide-screens{
+      @media screen and (min-width: $width-extra-ultra-wide){
+        @content;
+      }
+    }
+}
