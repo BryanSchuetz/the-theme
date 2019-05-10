@@ -3,7 +3,7 @@ email: bryan_schuetz@dai.com
 description: | 
   A gem based them with universal grid, styles, and layout for use with all individually styled DAI blogs
 baseurl: "" 
-url: "" 
+url: "bschuetz.github.io/the-theme" 
 github_username:  bryanschuetz
 
 # Build settings
