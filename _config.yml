@@ -9,5 +9,3 @@ github_username:  bryanschuetz
 # Build settings
 markdown: kramdown
 destination: "./build"
-sass:
-  sass_dir: assets/_sass
