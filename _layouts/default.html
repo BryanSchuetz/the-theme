@@ -5,8 +5,9 @@
   <body class="{% if page.promos %}{% if page.promos[0].title.size > 1 %}promos {% endif %}{% endif %}{% if page.country-page %}country {% endif %}" >
     <div class="wrapper">
       {% include header.html %}
-      
-        {{ content }}
+        <div class="inner-wrap">
+          {{ content }}
+        </div>
     </div>
       {% include footer.html %}
     </div>

@@ -3,7 +3,7 @@ layout: default
 
 ---
 
-<div class="filler" style="padding: 5rem; margin-top: 100px;" >
+<div>
   <h1>Kid + Deck + Chaos</h1>
   <p>The boy stood on the burning deck
   Whence all but he had fled;
