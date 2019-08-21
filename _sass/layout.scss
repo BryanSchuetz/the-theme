@@ -1,6 +1,23 @@
+// 🎌 structure 🎌
 @charset "utf-8";
-.inner-wrap{
-  padding: 9rem 2rem;
+.blogs-block{
+  @include responsive(small-screens){
+    margin-top: 92px;
+    
+  }
+  @include responsive(medium-screens){
+    margin-top: 114px;
+  }
+  @include responsive(wide-screens){
+    margin-top: 127px;
+    
+  }
 }
 
+// 🎌 masthead 🎌
+
+.blog-masthead--logo{
+  background-color: $slate;
+  height: 10rem;
+}
 

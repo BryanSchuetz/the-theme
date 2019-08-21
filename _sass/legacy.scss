@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 * {
   -webkit-box-sizing: border-box;
@@ -308,6 +309,9 @@ footer{
 
 // 🎌 FOOTER: NAV 🎌
 
+.copyright{
+  color: $nav_links;
+}
 .footer-nav{
   @include width(1);
   @include responsive(small-screens){
