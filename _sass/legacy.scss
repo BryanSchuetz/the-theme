@@ -65,7 +65,7 @@ body.st-ui-overlay-active{
 }
 
 
-// 🎌 HEADER 🎌
+// HEADER 
 
 header{
   position: fixed;
@@ -103,7 +103,9 @@ header{
   margin-right: auto;
   margin-left: auto;
 }
-// 🎌 HEADER: UTILITY NAVIGATION 🎌
+
+// HEADER: UTILITY NAVIGATION
+
 .st-ui-injected-overlay-container *:not(select){
   font-family: 'proxima-nova', helvetica, arial, sans-serif !important;
   .st-ui-header input[type="text"]:focus{
@@ -160,7 +162,7 @@ header{
     height: 64.594px;
   }
 }
-// 🎌 HEADER: PRIMARY NAVIGATION 🎌
+//  HEADER: PRIMARY NAVIGATION 
 
 .header-site_nav{
   background-color: $nav_gray;
@@ -187,6 +189,7 @@ header{
 .header-inner--logo{
   display: block;
   float: left;
+  color: $slate;
 }
 .header-nav--main{
   @include clearfix;
@@ -307,7 +310,7 @@ footer{
   @include clearfix;
 }
 
-// 🎌 FOOTER: NAV 🎌
+//  FOOTER: NAV 
 
 .copyright{
   color: $nav_links;
@@ -351,7 +354,7 @@ footer{
 .footer-nav.news{
   text-align: right;
 }
-// 🎌 FOOTER: BOTTOM 🎌
+//  FOOTER: BOTTOM 
 
 .footer-bottom{
   position: relative;
@@ -422,7 +425,7 @@ footer{
   }
 }
 
-// 🎌 HEROBOX 🎌
+//  HEROBOX 
 code.highlighter-rouge{
   position: relative;
   display: block;
@@ -452,7 +455,7 @@ code.highlighter-rouge{
 .gallery-subhead{
   font-weight: 700;
 }
-// 🎌 GLOBAL 🎌
+//  GLOBAL 
 html{
   line-height: 1.5;
   font-size: 10px;
@@ -493,7 +496,7 @@ a:focus {
   text-decoration: none;
 }
 
-// 🎌 HEADINGS 🎌
+//  HEADINGS 
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5em;
@@ -549,7 +552,7 @@ h4, h5, h6 {
   }
 }
 
-// 🎌 MAIN 🎌
+//  MAIN 
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -639,7 +642,7 @@ strong {
   font-size: .8rem;
 }
 
-// 🎌 NODE 🎌
+//  NODE 
 
 .node-nav--links{
   h4{
@@ -664,7 +667,7 @@ strong {
 .node-inner li{
   margin-bottom: .8rem;
 }
-// 🎌 Solutions 🎌
+//   Solutions
 .solution-title{
   svg{
     height: 2rem;
@@ -684,12 +687,12 @@ h2.solution-title svg{
   }
 }
 
-// 🎌 LEADERS 🎌
+//   LEADERS  
 .leaders-details p{
   font-weight: bold;
 }
 
-// 🎌 FOOTER 🎌
+//   FOOTER  
 
 .footer-nav{
   h4{

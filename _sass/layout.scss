@@ -1,5 +1,5 @@
-// 🎌 structure 🎌
 @charset "utf-8";
+// 🎌 structure 🎌
 .blogs-block{
   @include responsive(small-screens){
     margin-top: 92px;
@@ -13,7 +13,6 @@
     
   }
 }
-
 // 🎌 masthead 🎌
 
 .blog-masthead--logo{
