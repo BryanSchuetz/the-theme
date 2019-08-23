@@ -1,5 +1,7 @@
 @charset "utf-8";
-// 🎌 structure 🎌
+
+// STRUCTURE
+
 .blogs-block{
   @include responsive(small-screens){
     margin-top: 92px;
@@ -13,10 +15,49 @@
     
   }
 }
-// 🎌 masthead 🎌
 
+// MASTHEAD
+
+.header-flat--logo{
+  fill: $slate;  
+}
 .blog-masthead--logo{
   background-color: $slate;
   height: 10rem;
 }
+.blog-masthead{
+  @include clearfix;
+  .blog-masthead--subscribe, .blog-masthead--search{
+    padding: 15px;
+    height: 3rem;
+  }
+}
+.blog-masthead--subscribe{
+  background-color: $ofc_slate;
+  width: 100%;
+  h3{
+    color: #FFFFFF;
+  }
+  input{
+    border: none;
+    font-size: .6rem;
+    background-color: $ofc_slate;
+    border-bottom: 2px solid $ofc_lightblue;
+    color: $ofc_lightblue;
+    padding-bottom: 4px;
+    margin-left: 8%;
+    width: 70%;
+    outline: none;
+  }
+}
 
+.blog-masthead--search{
+  background-color: $ofc_lightgray;
+  width: 100%;
+}
+
+// FOOTER
+
+.footer-flat--logo{
+  fill: $nav_links;
+}
