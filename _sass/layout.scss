@@ -41,9 +41,9 @@
   //SEARCH
 
 .blog-masthead--search{
-  color: $ofc_lightblue;
   width: 100%;
   background-color: $ofc_lightgray;
+  color: $ofc_lightblue;
   @include responsive(wide-screens){
     width: 50%;
     float: left;
@@ -58,11 +58,15 @@
   }
   input{
     margin-left: 1rem;
+    font-weight: 700;
     border: none;
     background-color: $ofc-lightgray;
     outline: none;
     font-size: 1.2rem;
     color: $ofc_lightblue;
+    &::placeholder{
+      color: $ofc_lightblue;
+    }
   }
 }
 
