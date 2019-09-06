@@ -99,7 +99,55 @@
       width: 70%;
     }
   }
+} 
+
+// BLOG POSTS
+
+.blog-posts--featured{
+  background-color: $ofc_lightblue;
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+  svg{
+    width: 55%;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    stroke-width: 20;
+    @include responsive(wide-screens){
+      width: 55%;
+    }
+  }
+  h2{
+    color: $slate;
+    font-size: 2.1rem;
+    display: block;
+    position: relative;
+    width: 40%;
+    top: 4rem;
+    left: 5rem;
+    border-bottom: 8px solid $slate;
+    padding-bottom: 1rem;
+    &:after {
+      content:"";
+      background: $ofc_lightblue;
+      position: absolute;
+      bottom: 25%;
+      right: 0;
+      height: 8px;
+      width: 75%;
+      top: 100%;
+    }
+    .featured-thing{
+      font-weight: 200;
+    }
+  }
 }
+.blog-posts--post{
+  width: 100%;
+}
+
+
 
 // FOOTER
 
