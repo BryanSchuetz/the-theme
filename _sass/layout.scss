@@ -115,7 +115,10 @@
     left: 2rem;
     stroke-width: 20;
     @include responsive(wide-screens){
-      width: 55%;
+      width: 60%;
+    }
+    @include responsive(ultra-wide-screens){
+      width: 567px;
     }
   }
   h2{
@@ -124,6 +127,12 @@
     display: block;
     position: relative;
     width: 40%;
+    @include responsive(wide-screens){
+      width: 45%;
+    }
+    @include responsive(ultra-wide-screens){
+      width: 425.5px;
+    }
     top: 4rem;
     left: 5rem;
     border-bottom: 8px solid $slate;
@@ -136,6 +145,9 @@
       right: 0;
       height: 8px;
       width: 75%;
+      @include responsive(wide-screens){
+        width: 85%;
+      }
       top: 100%;
     }
     .featured-thing{
