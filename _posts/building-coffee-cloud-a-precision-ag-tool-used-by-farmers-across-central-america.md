@@ -5,9 +5,10 @@ date: 2019-06-20 08:00:00 -04:00
 tags:
 - Agriculture
 - Human-centered design
-Author: "[Talia Dweck](https://www.dai.com/who-we-are/our-team/talia-dweck)"
+author: "[Talia Dweck](https://www.dai.com/who-we-are/our-team/talia-dweck)"
 social-image: "/uploads/cover1.png"
 thumbnail: "/uploads/cover1.png"
+weight: 10
 ---
 
 Coffee rust has menaced the global coffee industry for more than a century, but particularly in the era of climate change. Nevertheless, effective, coordinated action between coffee producing countries across Central America has remained elusive, and as a result the disease has spread—to devastating effect. In 2012 and 2013, coffee rust reduced the region’s coffee production by 15 percent, including a staggering 31 percent in Honduras. The figure below shows the losses each country suffered during that season. 

@@ -21,7 +21,14 @@ layout: default
       <img src="{{ post.featured-image }}" alt="" class="featured-image">
         <h4 class="featured-post--blog">{{ site.title }}</h4>
         <div class="featured-post--metadata">
-          
+          {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
+          {%- if author -%}
+            <img src="{{ author.image }}" alt="">
+            <a href="">{{ author.name }}</a>
+          {%- else -%}
+            <img src="/uploads/author-placeholder.jpg" alt="">
+            {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
+          {%- endif -%}
         </div>
     </div>
     {%- endif -%}
