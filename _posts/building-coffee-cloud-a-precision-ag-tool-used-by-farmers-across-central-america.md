@@ -5,7 +5,7 @@ date: 2019-06-20 08:00:00 -04:00
 tags:
 - Agriculture
 - Human-centered design
-author: "[Talia Dweck](https://www.dai.com/who-we-are/our-team/talia-dweck)"
+author: "Talia Dweck"
 social-image: "/uploads/cover1.png"
 thumbnail: "/uploads/cover1.png"
 weight: 10
