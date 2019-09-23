@@ -15,22 +15,26 @@ layout: default
 <div class="blog-posts--featured">
   <svg class="border-rectrangle" viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
   <h2><span class="featured">FEATURE</span> <span class="featured-thing">ARTICLES</span></h2>
-  {%- for post in site.posts -%}
+</div>
+{%- for post in site.posts -%} 
     {%- if post.weight >= 8 -%}
     <div class="blog-posts--post">
       <img src="{{ post.featured-image }}" alt="" class="featured-image">
-        <h4 class="featured-post--blog">{{ site.title }}</h4>
+        <h4 class="featured-post--blog">{{ post.title }}</h4>
         <div class="featured-post--metadata">
           {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
           {%- if author -%}
-            <img src="{{ author.image }}" alt="">
-            <a href="">{{ author.name }}</a>
+            <img src="{{ author[0].image }}" alt="">
+            <a href="{{ author[0].link }}">{{ author[0].name }}</a>
           {%- else -%}
             <img src="/uploads/author-placeholder.jpg" alt="">
             {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
           {%- endif -%}
+          <p>Tags: {%- for tag in post.tags -%}{{ tag }} {%- endfor -%}</p>
+          <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %}
+  {{ time }} min read</p>
         </div>
     </div>
     {%- endif -%}
-  {%- endfor -%}
-</div>
+  {% endfor %}
+

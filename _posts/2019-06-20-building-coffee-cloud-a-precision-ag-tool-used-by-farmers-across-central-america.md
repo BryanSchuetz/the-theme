@@ -1,13 +1,15 @@
 ---
 title: 'Building Coffee Cloud: A Precision Ag Tool Used by Farmers Across Central
   America'
+layout: post
 date: 2019-06-20 08:00:00 -04:00
 tags:
 - Agriculture
-- Human-centered design
+- Human Centered Design
 author: "Talia Dweck"
 social-image: "/uploads/cover1.png"
 thumbnail: "/uploads/cover1.png"
+featured-image: "/uploads/cover1.png"
 weight: 10
 ---
 
