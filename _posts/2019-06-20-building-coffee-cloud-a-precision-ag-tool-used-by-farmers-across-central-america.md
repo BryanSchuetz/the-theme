@@ -7,9 +7,9 @@ tags:
 - Agriculture
 - Human Centered Design
 author: "Talia Dweck"
-social-image: "/uploads/cover1.png"
-thumbnail: "/uploads/cover1.png"
-featured-image: "/uploads/cover1.png"
+social-image: "/uploads/cover.png"
+thumbnail: "/uploads/cover.png"
+featured-image: "/uploads/cover.png"
 weight: 10
 ---
 

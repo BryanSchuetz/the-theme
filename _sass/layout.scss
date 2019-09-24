@@ -156,11 +156,19 @@
     }
   }
 }
-.blog-posts--post{
+.featured-posts--post{
   width: 100%;
   padding: 0 2rem;
 }
+.featured-post--blog{
+  padding: 1.5rem;
+  background-color: $ofc_slate;
+  color: white;
+}
 
+.featured-post--image{
+
+}
 .featured-post--metadata{
   img{
     clip-path: circle(50% at 50% 50%);

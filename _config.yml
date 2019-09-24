@@ -1,4 +1,4 @@
-title: The Theme
+title: A Blog Title
 email: bryan_schuetz@dai.com
 description: | 
   A gem based theme with universal grid, styles, and layout for use with all individually styled DAI blogs
@@ -10,3 +10,7 @@ github_username:  bryanschuetz
 markdown: kramdown
 destination: "./build"
 permalink: "/:title"
+collections:
+   uploads:
+    title: Uploads
+    output: true
