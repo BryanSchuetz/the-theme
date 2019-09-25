@@ -158,7 +158,7 @@
 }
 .featured-posts--post{
   width: 100%;
-  padding: 0 2rem;
+  @include clearfix;
 }
 .featured-post--blog{
   padding: 1.5rem;
@@ -166,20 +166,39 @@
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  width: 50%;
+  float: left;
+  font-size: 1rem;
+
 }
 
 .featured-post--image{
-
+  width: 50%;
+  float: right;
+}
+.featured-post--title{
+  width: 50%;
+  margin-top: 4rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
 }
 .featured-post--metadata{
+  @include clearfix;
   img{
     clip-path: circle(50% at 50% 50%);
     width: 2rem;
   }
+  padding: 2rem;
+  width: 50%;
+  float: left;
+  .metadata-pic{
+    float: left;
+
+  }
+  .metadata-data{
+    float: right;
+  }
 }
-
-
-
 
 // FOOTER
 
