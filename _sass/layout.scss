@@ -40,6 +40,12 @@
 
   //SEARCH
 
+.bar{
+  width: 15%;
+  border: 0;
+  border-bottom: 8px solid $ofc_slate;
+}
+
 .blog-masthead--search{
   width: 100%;
   background-color: $ofc_lightgray;
@@ -92,6 +98,9 @@
     margin-left: 3%;
     outline: none;
     width: 70%;
+    &::placeholder{
+      color: $ofc_lightblue;
+    }
     @include  responsive(wide-screens){
       width: 50%;
     }
@@ -160,13 +169,17 @@
   width: 100%;
   @include clearfix;
 }
+.post-data{
+  width: 50%;
+  float: left;
+  padding: 1rem;
+}
 .featured-post--blog{
   padding: 1.5rem;
   background-color: $ofc_slate;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  width: 50%;
   float: left;
   font-size: 1rem;
 
@@ -177,29 +190,44 @@
   float: right;
 }
 .featured-post--title{
-  width: 50%;
+  width: 90%;
   margin-top: 4rem;
-  padding-left: 2rem;
   padding-top: 2rem;
+  font-size: 1.5rem;
 }
 .featured-post--metadata{
   @include clearfix;
-  img{
-    clip-path: circle(50% at 50% 50%);
-    width: 2rem;
-  }
-  padding: 2rem;
-  width: 50%;
+  font-size: .7rem;
   float: left;
+  a{
+    color: $ofc_super_lightblue;
+  }
   .metadata-pic{
-    float: left;
-
+    img{
+      float: left;
+      margin-top: .4rem;
+      clip-path: circle(50% at 50% 50%);
+      width: 2rem;
+    }
+    a{
+      margin-left: .5rem;
+      font-weight: bold;
+      position: relative;
+      top: .1rem;
+    }
   }
   .metadata-data{
-    float: right;
+    padding-left: 2.5rem;
+    p{
+      margin: 0;
+      line-height: 1rem;
+    }
+    .seperator{
+      font-size: 0.9rem;
+      position: relative;
+    }
   }
 }
-
 // FOOTER
 
 .footer-flat--logo{
