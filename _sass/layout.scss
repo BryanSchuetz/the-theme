@@ -174,16 +174,11 @@
   width: 50%;
   float: right;
 }
-.metadata-title{
-  width: 90%;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  font-size: 1.5rem;
-}
 .post-metadata{
   @include clearfix;
   font-size: .7rem;
   float: left;
+  padding-left: 1.5rem;
   a{
     color: $ofc_super_lightblue;
   }
@@ -212,6 +207,18 @@
       position: relative;
     }
   }
+}
+.post-title{
+  margin-top: 4rem;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
+.post-data--wrap{
+  padding-left: 4rem;
+  padding-right: 1rem;
+}
+.post-summary{
+  margin-top: 1rem;
 }
 // FOOTER
 
