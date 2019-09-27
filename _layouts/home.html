@@ -12,17 +12,20 @@ layout: default
     <h3>Subscribe <input type="text" placeholder="Email Address"></h3>
   </div>
 </div>    
-<div class="blog-posts--featured">
-  <svg class="border-rectrangle" viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
-  <h2><span class="featured">FEATURE</span> <span class="featured-thing">ARTICLES</span></h2>
+<div class="featured-header">
+  <svg viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
+  <div class="header-title">
+    <h2><span>FEATURE</span> <span class="emphasize">ARTICLES</span></h2>
+    <hr class="bar">
+  </div>
 </div>
 {%- for post in site.posts -%} 
     {%- if post.weight >= 8 -%}
-    <div class="featured-posts--post">
-      <img src="{{ post.featured-image }}" alt="" class="featured-post--image">
+    <div class="featured-post">
+      <img src="{{ post.featured-image }}" alt="" class="post-image">
+      <div class="post-blog">{{ site.title }}</div>
       <div class="post-data">
-        <div class="featured-post--blog">{{ site.title }}</div>
-        <div class="featured-post--metadata">
+        <div class="post-metadata">
             {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
             {%- if author -%}
             <div class="metadata-pic">
@@ -41,7 +44,7 @@ layout: default
       {{ time }} min read</p>
             </div>
         </div>
-        <h4 class="featured-post--title">{{ post.title }}</h4>
+        <h4 class="metadata-title">{{ post.title }}</h4>
         <hr class="bar">
         <p>{{ post.excerpt}}</p>
       </div>

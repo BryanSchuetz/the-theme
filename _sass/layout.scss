@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-// STRUCTURE
+// Components
 
 .blogs-block{
   @include responsive(small-screens){
@@ -14,6 +14,11 @@
     margin-top: 127px;
     
   }
+}
+.bar{
+  width: 4rem;
+  border: 0;
+  border-bottom: 8px solid $ofc_slate;
 }
 
 // MASTHEAD
@@ -39,12 +44,6 @@
 }
 
   //SEARCH
-
-.bar{
-  width: 15%;
-  border: 0;
-  border-bottom: 8px solid $ofc_slate;
-}
 
 .blog-masthead--search{
   width: 100%;
@@ -112,7 +111,7 @@
 
 // BLOG POSTS
 
-.blog-posts--featured{
+.featured-header{
   @include clearfix;
   background-color: $ofc_lightblue;
   height: 12rem;
@@ -131,11 +130,17 @@
       width: 567px;
     }
   }
+  .header-title{
+    margin-left: 5rem;
+    margin-top: 4rem;
+    @include responsive(wide-screens){
+      margin-top: 5rem;
+    }
+  }
   h2{
     color: $slate;
     font-size: 2.1rem;
     display: block;
-    position: relative;
     width: 40%;
     @include responsive(wide-screens){
       width: 45%;
@@ -143,29 +148,9 @@
     @include responsive(ultra-wide-screens){
       width: 425.5px;
     }
-    top: 4rem;
-    left: 5rem;
-    border-bottom: 8px solid $slate;
-    padding-bottom: 1rem;
-    &:after {
-      content:"";
-      background: $ofc_lightblue;
-      position: absolute;
-      bottom: 25%;
-      right: 0;
-      height: 8px;
-      width: 75%;
-      @include responsive(wide-screens){
-        width: 85%;
-      }
-      top: 100%;
-    }
-    .featured-thing{
-      font-weight: 200;
-    }
   }
 }
-.featured-posts--post{
+.featured-post{
   width: 100%;
   @include clearfix;
 }
@@ -174,28 +159,28 @@
   float: left;
   padding: 1rem;
 }
-.featured-post--blog{
+.post-blog{
   padding: 1.5rem;
   background-color: $ofc_slate;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   float: left;
+  width: 50%;
   font-size: 1rem;
-
 }
 
-.featured-post--image{
+.post-image{
   width: 50%;
   float: right;
 }
-.featured-post--title{
+.metadata-title{
   width: 90%;
   margin-top: 4rem;
   padding-top: 2rem;
   font-size: 1.5rem;
 }
-.featured-post--metadata{
+.post-metadata{
   @include clearfix;
   font-size: .7rem;
   float: left;
