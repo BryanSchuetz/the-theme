@@ -170,9 +170,12 @@
   font-size: 1rem;
 }
 
-.post-image{
+.featured-image{
   width: 50%;
   float: right;
+  height: 35rem;
+  background-size: cover;
+
 }
 .post-metadata{
   @include clearfix;
