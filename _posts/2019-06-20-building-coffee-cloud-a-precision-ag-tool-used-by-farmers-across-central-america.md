@@ -10,7 +10,7 @@ author: "Talia Dweck"
 social-image: "/uploads/cover.png"
 thumbnail: "/uploads/cover.png"
 featured-image: "/uploads/cover.png"
-weight: 10
+weight: 9
 summary: Coffee rust has menaced the global coffee industry for more than a century, but particularly in the era of climate change.
 ---
 
