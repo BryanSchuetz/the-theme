@@ -239,10 +239,35 @@
   background-color: $ofc_lightblue;
   width: 100%;
   min-height: 12rem;
+  @include clearfix;
 }
 
 // FOOTER
 
 .footer-flat--logo{
   fill: $nav_links;
+}
+
+.other-wrap{
+  width: 40%;
+  float: left;
+  margin-top: 2rem;
+  background-color: white;
+  @include clearfix;
+  &.odd{
+      margin-left: 5%;
+    }
+  &.even{
+      float: right;
+      margin-right: 5%;
+    }
+  img{
+    width: 100%;
+  }
+  .post-blog{
+    float: none;
+    width: 100%;
+    padding: .7rem;
+    font-weight: 300;
+  }
 }
