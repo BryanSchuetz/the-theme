@@ -60,7 +60,7 @@ layout: default
       <div class="post-data">
           <div class="post-metadata">
             {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
-            {%- if author -%}
+            {%- if author.size > 0 -%}
             <div class="metadata-pic">
               <img src="{{ author[0].image }}" alt="">
               <a href="{{ author[0].link }}">{{ author[0].name }}</a>
@@ -72,7 +72,6 @@ layout: default
             </div>
             {%- endif -%}
             <div class="metadata-data">
-              <p>Tags: {% for tag in post.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">•</span> {% endunless %} {% endfor %}</p>
               <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
             </div>
           </div>
