@@ -12,6 +12,8 @@ thumbnail-image: "/uploads/Denning%20social.jpg"
 social-image: "/uploads/Denning%20social-b72ee7.jpg"
 featured-image: "/uploads/Denning%20social-b72ee7.jpg"
 weight: 9
+summary: |
+  In "The Age of Agile" Steve Denning argues that agile management is superior to traditional, hierarchical management styles.
 ---
 
 In "[The Age of Agile](https://www.amazon.com/Age-Agile-Smart-Companies-Transforming/dp/B079J69V4M/ref=sr_1_1?keywords=age+of+agile&qid=1567523457&s=books&sr=1-1)," [Steve Denning](http://www.stevedenning.com/About/default.aspx) argues that agile management is superior to traditional, hierarchical management styles. Companies that adopt agile outperform the rest, and will continue to do so. Agile is catching on, and not only in the software development sector that popularized it. 

@@ -214,6 +214,7 @@
   margin-top: 4rem;
   padding-top: 2rem;
   font-size: 1.5rem;
+  font-family: $condensed-titles;
 }
 .post-data--wrap{
   padding-left: 4rem;
@@ -239,6 +240,9 @@
   width: 100%;
   min-height: 12rem;
   @include clearfix;
+  .post-data{
+    width: 100%;
+  }
 }
 
 // FOOTER
@@ -260,6 +264,13 @@
       float: right;
       margin-right: 5%;
     }
+  .post-metadata{
+    float: none;
+  }
+  .featured-image{
+    height: 314px;
+    width: 100%;
+  }
   img{
     width: 100%;
   }
@@ -268,5 +279,19 @@
     width: 100%;
     padding: .7rem;
     font-weight: 300;
+  }
+  .post-data--wrap{
+    overflow: none;
+    padding-left: 1.5rem;
+    .post-summary{
+      display: block;
+      min-height: 81px; 
+    }
+    .post-title{
+      display: block;
+      padding-top: 0;
+      margin-top: 1rem;
+      min-height: 100px;
+    }
   }
 }

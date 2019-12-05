@@ -13,6 +13,7 @@ publication: Developments
 layout: post
 weight: 7
 featured-image: "/uploads/Fair%20in%20LCB%202-9c4ff6.JPG"
+summary: "It is no coincidence that the cities and neighborhoods in Honduras with the highest incidence of violence are also those with the highest migration rates."
 ---
 
 It is no coincidence that the cities and neighborhoods in Honduras with the [highest incidence of violence](https://worldview.stratfor.com/article/crime-honduras-map-homicide-highways) are also those with the highest migration rates. In the case of Choloma, for instance, the city’s homicide rate was 77 per 100,000 people in 2018—which is high even by the standards of cities such as Tegucigalpa, Tela, and La Ceiba, where crime and violence are also unremitting. From October 2018 to March 2019, Choloma’s homicide rate was 37 per 100,000—on pace to meet or exceed last year’s rate. School principals in the area report that record numbers of young people dropped out of school to migrate north during that period. 
