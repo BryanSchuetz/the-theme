@@ -22,8 +22,8 @@ layout: default
 {%- assign toppost = site.posts | where_exp:"post","post.weight > 8"  -%}
 {%- for post in toppost limit:1 -%} 
     <div class="featured-post">
-    <div class="featured-image" style="background-image: url({{ post.featured-image }});"></div>
       <div class="post-blog">{{ site.title }}</div>
+      <div class="featured-image" style="background-image: url({{ post.featured-image }});"></div>
       <div class="post-data">
         <div class="post-metadata">
           {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}

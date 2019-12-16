@@ -109,7 +109,10 @@
   }
 } 
 
-// BLOG POSTS
+// BLOG POSTS 
+// This should include a group for the following groups: feature 1, feature 2 and 3, recent articles, and more news
+
+// Header for section 1 and 2 Featured Articls
 
 .featured-header{
   @include clearfix;
@@ -150,31 +153,45 @@
     }
   }
 }
+
+// Featured post 1 
+
 .featured-post{
   width: 100%;
   @include clearfix;
 }
 .post-data{
-  width: 50%;
-  float: left;
+  width: 100%;
   padding: 1rem;
+  @include responsive(wide-screens){
+    width: 50%;
+    float: left;
+  }
 }
 .post-blog{
-  padding: 1.5rem;
+  width: 100%;
+  font-size: 1rem;
   background-color: $ofc_slate;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  float: left;
-  width: 50%;
-  font-size: 1rem;
+  padding: 1.5rem;
+  @include responsive(wide-screens){
+    float: left;
+    width: 50%;
+  }
 }
 
 .featured-image{
-  width: 50%;
-  float: right;
-  height: 35rem;
+  width: 100%;
+  height: 20rem;
   background-size: cover;
+  @include responsive(wide-screens){
+    display: block;
+    width: 50%;
+    float: right;
+    height: 35rem;
+  }
 
 }
 .post-metadata{
@@ -235,6 +252,9 @@
   text-align: center;
   font-size: .8rem;
 }
+
+// Featured items 2 and 3
+
 .other-featured{
   background-color: $ofc_lightblue;
   width: 100%;
@@ -243,12 +263,6 @@
   .post-data{
     width: 100%;
   }
-}
-
-// FOOTER
-
-.footer-flat--logo{
-  fill: $nav_links;
 }
 
 .other-wrap{
@@ -294,4 +308,9 @@
       min-height: 100px;
     }
   }
+}
+// FOOTER
+
+.footer-flat--logo{
+  fill: $nav_links;
 }
