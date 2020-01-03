@@ -1,3 +1,11 @@
+// BLOCK ELEMENT MODIFIER NAMING SCHEME
+
+// Any component with subsequent parts should be treated as a block, its parts as elements. Modifiers should be reserved for changes in state
+
+// Collections should be used to organize elements shared by blocks
+
+
+
 @charset "utf-8";
 
 // Components
@@ -110,9 +118,6 @@
 } 
 
 // BLOG POSTS 
-// This should include a group for the following groups: feature 1, feature 2 and 3, recent articles, and more news
-
-// Header for section 1 and 2 Featured Articls
 
 .featured-header{
   @include clearfix;
