@@ -12,16 +12,16 @@ layout: default
     <h3>Subscribe <input type="text" placeholder="Email Address"></h3>
   </div>
 </div>    
-<div class="featured-header">
+<div class="featured">
   <svg viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
-  <div class="header-title">
+  <div class="featured--title">
     <h2><span>FEATURE</span> <span class="emphasize">ARTICLES</span></h2>
     <hr class="bar">
   </div>
 </div>
 {%- assign toppost = site.posts | where_exp:"post","post.weight > 8"  -%}
 {%- for post in toppost limit:1 -%} 
-    <div class="featured-post">
+    <div class="featured-zero">
       <div class="post-blog">{{ site.title }}</div>
       <div class="featured-image" style="background-image: url({{ post.featured-image }});"></div>
       <div class="post-data">

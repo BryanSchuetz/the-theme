@@ -120,7 +120,16 @@
 
 // BLOG POSTS 
 
-.featured-header{
+// BEM COMPONENETS 
+
+// Blocks: featured, featured-zero, featured-add, featured-header, recent-header
+
+// Collections: metadata, post-abstract
+
+// Elements: author-name, tags, readtime, date, post-title, summary, button, image, blog, wrappers, header-title
+
+
+.featured{
   @include clearfix;
   background-color: $ofc_lightblue;
   height: 12rem;
@@ -139,7 +148,8 @@
       width: 567px;
     }
   }
-  .header-title{
+  &--title{
+
     margin-left: 5rem;
     margin-top: 4rem;
     @include responsive(wide-screens){
@@ -162,7 +172,7 @@
 
 // Featured post 1 
 
-.featured-post{
+.featured-zero{
   width: 100%;
   @include clearfix;
 }
