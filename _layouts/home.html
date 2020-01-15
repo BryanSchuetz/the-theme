@@ -22,31 +22,31 @@ layout: default
 {%- assign toppost = site.posts | where_exp:"post","post.weight > 8"  -%}
 {%- for post in toppost limit:1 -%} 
     <div class="featured-zero">
-      <div class="post-blog">{{ site.title }}</div>
-      <div class="featured-image" style="background-image: url({{ post.featured-image }});"></div>
-      <div class="post-data">
-        <div class="post-metadata">
+      <div class="featured-zero--blog">{{ site.title }}</div>
+      <div class="featured-zero--image" style="background-image: url({{ post.featured-image }});"></div>
+      <div class="featured-zero--post">
+        <div class="featured-zero--author">
           {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
           {%- if author -%}
-          <div class="metadata-pic">
+          <div class="featured-zero--author-pic">
             <img src="{{ author[0].image }}" alt="">
             <a href="{{ author[0].link }}">{{ author[0].name }}</a>
           </div>
           {%- else -%}
-          <div class="metadata-pic">
+          <div class="featured-zero--author-pic">
             <img src="/uploads/author-placeholder.jpg" alt="">
             {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
           </div>
           {%- endif -%}
-          <div class="metadata-data">
+          <div class="featured-zero--author-data">
             <p>Tags: {% for tag in post.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">•</span> {% endunless %} {% endfor %}</p>
             <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
           </div>
         </div>
-        <div class="post-data--wrap">
-          <h4 class="post-title">{{ post.title }}</h4>
+        <div class="featured-zero--post-wrap">
+          <h4>{{ post.title }}</h4>
           <hr class="bar">
-          <p class="post-summary">{{ post.summary}}</p>
+          <p>{{ post.summary}}</p>
           <a href="{{ post.url }}" class="button">READ MORE</a>
         </div>
       </div>

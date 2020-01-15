@@ -2,7 +2,6 @@
 
 // Any component with subsequent parts should be treated as a block, its parts as elements. Modifiers should be reserved for changes in state
 
-// Collections should be used to organize elements shared by blocks
 
 
 
@@ -124,10 +123,21 @@
 
 // Blocks: featured, featured-zero, featured-add, featured-header, recent-header
 
-// Collections: metadata, post-abstract
+// Nested-Blocks: metadata, post-abstract
 
 // Elements: author-name, tags, readtime, date, post-title, summary, button, image, blog, wrappers, header-title
 
+.button{
+  background-color: $ofc_slate;
+  padding: .5rem .3rem;
+  border-radius: 5px;
+  color: $text-white;
+  display: block;
+  margin: 1rem 0;
+  width: 40%;
+  text-align: center;
+  font-size: .8rem;
+}
 
 .featured{
   @include clearfix;
@@ -175,16 +185,8 @@
 .featured-zero{
   width: 100%;
   @include clearfix;
-}
-.post-data{
-  width: 100%;
-  padding: 1rem;
-  @include responsive(wide-screens){
-    width: 50%;
-    float: left;
-  }
-}
-.post-blog{
+  
+  &--blog{
   width: 100%;
   font-size: 1rem;
   background-color: $ofc_slate;
@@ -192,33 +194,52 @@
   font-weight: bold;
   text-transform: uppercase;
   padding: 1.5rem;
+    
   @include responsive(wide-screens){
     float: left;
     width: 50%;
-  }
-}
+    }
 
-.featured-image{
+  }
+  
+  &--image{
   width: 100%;
   height: 20rem;
   background-size: cover;
+    
   @include responsive(wide-screens){
-    display: block;
-    width: 50%;
-    float: right;
-    height: 35rem;
+      display: block;
+      width: 50%;
+      float: right;
+      height: 35rem;
+    }
+
   }
 
-}
-.post-metadata{
+  &--post{
+  width: 100%;
+  padding: 1rem;
+    
+  @include responsive(wide-screens){
+      width: 50%;
+      float: left;
+    }
+
+  }
+
+  &--author{
   @include clearfix;
   font-size: .7rem;
   float: left;
   padding-left: 1.5rem;
-  a{
-    color: $ofc_super_lightblue;
+  
+    a{
+      color: $ofc_super_lightblue;
+    }
+  
   }
-  .metadata-pic{
+
+  &--author-pic{
     img{
       float: left;
       clip-path: circle(49%);
@@ -231,7 +252,8 @@
       top: .1rem;
     }
   }
-  .metadata-data{
+
+  &--author-data{
     padding-left: 2.5rem;
     p{
       margin: 0;
@@ -242,32 +264,22 @@
       position: relative;
     }
   }
-}
-.post-title{
-  margin-top: 4rem;
-  padding-top: 2rem;
-  font-size: 1.5rem;
-  font-family: $condensed-titles;
-}
-.post-data--wrap{
-  padding-left: 4rem;
-  padding-right: 1rem;
-}
-.post-summary{
-  margin-top: 1rem;
+  
+  &--post-wrap{
+    padding-left: 4rem;
+    padding-right: 1rem;
+    h4{
+      margin-top: 4rem;
+      padding-top: 2rem;
+      font-size: 1.5rem;
+      font-family: $condensed-titles;
+    }
+    p{
+      margin-top: 1rem;
+    }
+  }
 }
 
-.post-data .button{
-  background-color: $ofc_slate;
-  padding: .5rem .3rem;
-  border-radius: 5px;
-  color: $text-white;
-  display: block;
-  margin: 1rem 0;
-  width: 40%;
-  text-align: center;
-  font-size: .8rem;
-}
 
 // Featured items 2 and 3
 
