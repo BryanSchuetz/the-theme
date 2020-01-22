@@ -52,35 +52,35 @@ layout: default
       </div>
     </div>
   {% endfor %}
-  <div class="other-featured">
+  <div class="featured-other">
   {%- for post in toppost offset:1 limit:2-%}
-    <div class="other-wrap {% cycle "odd", "even" %}">
-      <div class="post-blog">{{ site.title }}</div>
-      <div class="featured-image" style="background-image: url({{post.featured-image}}); background-position: center; background-size: cover; ">
+    <div class="featured-other--wrap {% cycle "odd", "even" %}">
+      <div class="featured-other--blog">{{ site.title }}</div>
+      <div class="featured-other--image" style="background-image: url({{post.featured-image}}); background-position: center; background-size: cover; ">
       
-      </div>
-      <div class="post-data">
-          <div class="post-metadata">
+      </div> 
+      <div class="featured-other--post">
+          <div class="featured-other--author">
             {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
             {%- if author.size > 0 -%}
-            <div class="metadata-pic">
+            <div class="featured-other--author-pic">
               <img src="{{ author[0].image }}" alt="">
               <a href="{{ author[0].link }}">{{ author[0].name }}</a>
             </div>
             {%- else -%}
-            <div class="metadata-pic">
+            <div class="featured-other--author-pic">
               <img src="/uploads/author-placeholder.jpg" alt="">
               {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
             </div>
             {%- endif -%}
-            <div class="metadata-data">
+            <div class="featured-other--author-data">
               <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
             </div>
           </div>
-          <div class="post-data--wrap">
-            <h4 class="post-title">{{ post.title | truncate: 84 }}</h4>
+          <div class="featured-other--post-wrap">
+            <h4 class="featured-other--title">{{ post.title | truncate: 84 }}</h4>
             <hr class="bar">
-            <p class="post-summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
+            <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
             <a href="{{ post.url }}" class="button">READ MORE</a>
           </div>
         </div>

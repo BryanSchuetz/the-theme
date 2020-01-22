@@ -283,7 +283,7 @@
 
 // Featured items 2 and 3
 
-.other-featured{
+.featured-other{
   background-color: $ofc_lightblue;
   width: 100%;
   min-height: 12rem;
@@ -291,52 +291,111 @@
   .post-data{
     width: 100%;
   }
-}
 
-.other-wrap{
+  &--blog{
+      font-size: 1rem;
+      background-color: $ofc_slate;
+      color: white;
+      text-transform: uppercase;
+      float: none;
+      width: 100%;
+      padding: .7rem;
+      font-weight: 300;
+    }
+  &--image{
+      height: 314px;
+      width: 100%;
+    }
+
+
+  &--author{
+    
+    @include clearfix;
+    font-size: .7rem;
+    float: none;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+  
+    a{
+      color: $ofc_super_lightblue;
+    }
+
+  }
+  
+  &--author-pic{
+    img{
+      float: left;
+      clip-path: circle(49%);
+      width: 2rem;
+    }
+    a{
+      margin-left: .5rem;
+      font-weight: bold;
+      position: relative;
+      top: .1rem;
+    }
+  }
+
+  &--author-data{
+    padding-left: 2.5rem;
+    p{
+      margin: 0;
+      line-height: 1rem;
+    }
+    .seperator{
+      font-size: 0.9rem;
+      position: relative;
+    }
+  }
+
+
+  &--post-wrap{
+      overflow: none;
+      padding-left: 1.5rem;
+      .post-summary{
+        display: block;
+        min-height: 81px; 
+      }
+      .post-title{
+        display: block;
+        padding-top: 0;
+        margin-top: 1rem;
+        min-height: 100px;
+      }
+    }
+
+  &--title{
+    display: block;
+    padding-top: 0;
+    margin-top: 1rem;
+    min-height: 100px;
+  }
+
+  &--summary{
+        display: block;
+        min-height: 81px; 
+        margin-top: 1rem;
+      }
+
+  &--wrap{
   width: 40%;
   float: left;
   margin-top: 2rem;
   background-color: white;
   @include clearfix;
-  &.odd{
-      margin-left: 5%;
-    }
-  &.even{
-      float: right;
-      margin-right: 5%;
-    }
-  .post-metadata{
-    float: none;
+  
+    &.odd{
+        margin-left: 5%;
+      }
+    &.even{
+        float: right;
+        margin-right: 5%;
+      }
+
   }
-  .featured-image{
-    height: 314px;
-    width: 100%;
-  }
-  img{
-    width: 100%;
-  }
-  .post-blog{
-    float: none;
-    width: 100%;
-    padding: .7rem;
-    font-weight: 300;
-  }
-  .post-data--wrap{
-    overflow: none;
-    padding-left: 1.5rem;
-    .post-summary{
-      display: block;
-      min-height: 81px; 
-    }
-    .post-title{
-      display: block;
-      padding-top: 0;
-      margin-top: 1rem;
-      min-height: 100px;
-    }
-  }
+
 }
+
 // FOOTER
 
 .footer-flat--logo{
