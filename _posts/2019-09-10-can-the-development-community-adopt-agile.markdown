@@ -1,5 +1,5 @@
 ---
-title: Can the Development Community Adopt Agile?
+title: Can the Development Community Adopt Agile? And Even Longer Titles Than the Ones You Might be used to Seeing.
 date: 2019-09-10 11:37:00 -04:00
 layout: post
 tags:

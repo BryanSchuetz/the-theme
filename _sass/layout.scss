@@ -3,8 +3,6 @@
 // Any component with subsequent parts should be treated as a block, its parts as elements. Modifiers should be reserved for changes in state
 
 
-
-
 @charset "utf-8";
 
 // Components
@@ -207,6 +205,7 @@
   &--post{
     width: 100%;
     padding: 1rem;
+    @include clearfix;
     @include responsive(wide-screens){
       width: 50%;
       float: left;
@@ -268,7 +267,6 @@
 .featured-other{
   background-color: $ofc_lightblue;
   width: 100%;
-  min-height: 12rem;
   @include clearfix;
   .post-data{
     width: 100%;
@@ -343,7 +341,7 @@
   }
   &--summary{
     display: block;
-    min-height: 81px; 
+    min-height: 108px; 
     margin-top: 1rem;
   }
   &--wrap{
@@ -351,6 +349,7 @@
     float: left;
     margin-top: 2rem;
     background-color: white;
+    min-height: 771px;
     @include clearfix;
     &.odd{
         margin-left: 5%;
