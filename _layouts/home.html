@@ -44,8 +44,7 @@ layout: default
           </div>
         </div>
         <div class="featured-zero--post-wrap">
-          <h4>{{ post.title }}</h4>
-          <hr class="bar">
+          <h4>{{ post.title }}<hr class="bar"></h4>
           <p>{{ post.summary}}</p>
           <a href="{{ post.url }}" class="button">READ MORE</a>
         </div>
@@ -79,14 +78,19 @@ layout: default
             </div>
           </div>
           <div class="featured-other--post-wrap">
-            <h4 class="featured-other--title">{{ post.title | truncate: 84 }}</h4>
-            <hr class="bar">
+            <h4 class="featured-other--title">{{ post.title | truncate: 84 }}<hr class="bar"></h4>
             <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
             <a href="{{ post.url }}" class="button">READ MORE</a>
           </div>
         </div>
     </div>
   {%- endfor -%}
+<div class="recent">
+  <svg viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
+  <div class="featured--title">
+    <h2><span>RECENT</span> <span class="emphasize">ARTICLES</span></h2>
+    <hr class="bar">
+  </div>
 </div>
   <div class="main-carousel">
   <div class="carousel-cell"><h1>Here's the thing</h1></div>

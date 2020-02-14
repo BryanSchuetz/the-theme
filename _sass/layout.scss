@@ -20,9 +20,10 @@
 }
 
 .bar{
-  width: 4rem;
+  width: 2.1875rem;
   border: 0;
-  border-bottom: 8px solid $ofc_slate;
+  border-bottom: 0.325rem solid $ofc_slate;
+  margin-top: 1rem;
 }
 
 // MASTHEAD
@@ -133,7 +134,7 @@
   font-size: .8rem;
 }
 
-.featured{
+.featured, .recent{
   @include clearfix;
   background-color: $ofc_lightblue;
   height: 12rem;
@@ -171,6 +172,9 @@
       width: 425.5px;
     }
   }
+}
+.recent{
+  background-color: $ofc_lightgray;
 }
 
 // Featured post 1 
