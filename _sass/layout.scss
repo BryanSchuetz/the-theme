@@ -140,18 +140,13 @@
   height: 12rem;
   overflow: hidden;
   position: relative;
-  svg{
-    width: 55%;
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    stroke-width: 20;
-    @include responsive(wide-screens){
-      width: 60%;
-    }
-    @include responsive(ultra-wide-screens){
-      width: 567px;
-    }
+  background-image: url(/assets/images/top-rec.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2rem;
+  background-position-y: 2rem;
+  background-size: 600px;
+  @include responsive(wide-screens){
+    background-size: 900px;
   }
   &--title{
     margin-left: 5rem;
@@ -270,8 +265,29 @@
 
 .featured-other{
   background-color: $ofc_lightblue;
+  background-image: url(/assets/images/bottom-rec.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2rem; 
+  background-size: 600px;
+  @include responsive(wide-screens){
+    background-size: 900px;
+  }
   width: 100%;
+  position: relative;
   @include clearfix;
+  padding-bottom: 2rem;
+  // .svg-image{
+  //   width: 75%;
+  //   position: absolute;
+  //   left: 2rem;
+  //   stroke-width: 20;
+  //   @include responsive(wide-screens){
+  //     width: 70%;
+  //   }
+  //   @include responsive(ultra-wide-screens){
+  //     width: 900px;
+  //   }
+  // }
   .post-data{
     width: 100%;
   }

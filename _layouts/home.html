@@ -13,7 +13,6 @@ layout: default
   </div>
 </div>    
 <div class="featured">
-  <svg viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
   <div class="featured--title">
     <h2><span>FEATURE</span> <span class="emphasize">ARTICLES</span></h2>
     <hr class="bar">
@@ -56,9 +55,7 @@ layout: default
   {%- for post in toppost offset:1 limit:2-%}
     <div class="featured-other--wrap {% cycle "odd", "even" %}">
       <div class="featured-other--blog">{{ site.title }}</div>
-      <div class="featured-other--image" style="background-image: url({{post.featured-image}}); background-position: center; background-size: cover; ">
-      
-      </div> 
+      <div class="featured-other--image" style="background-image: url({{post.featured-image}}); background-position: center; background-size: cover; "></div> 
       <div class="featured-other--post">
           <div class="featured-other--author">
             {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
@@ -77,16 +74,16 @@ layout: default
               <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
             </div>
           </div>
-          <div class="featured-other--post-wrap">
-            <h4 class="featured-other--title">{{ post.title | truncate: 84 }}<hr class="bar"></h4>
-            <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
-            <a href="{{ post.url }}" class="button">READ MORE</a>
-          </div>
+        <div class="featured-other--post-wrap">
+          <h4 class="featured-other--title">{{ post.title | truncate: 84 }}<hr class="bar"></h4>
+          <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
+          <a href="{{ post.url }}" class="button">READ MORE</a>
         </div>
+      </div>
     </div>
   {%- endfor -%}
+  </div>
 <div class="recent">
-  <svg viewBox="0 0 603 585" preserveAspectRatio="xMinYMax meet"><use xlink:href="#border-rectangle"></use></svg>
   <div class="featured--title">
     <h2><span>RECENT</span> <span class="emphasize">ARTICLES</span></h2>
     <hr class="bar">
