@@ -89,12 +89,34 @@ layout: default
     <hr class="bar">
     </div>
   <div class="main-carousel">
-    <div class="carousel-cell"><h1>Here's the thing</h1></div>
-    <div class="carousel-cell"><h1>..this is a slide in the deck..</h1></div>
-    <div class="carousel-cell"><h1>...and another one right here.</h1></div>
-    <div class="carousel-cell"><h1>Here's the thing TWO</h1></div>
-    <div class="carousel-cell"><h1>..this is a slide in the deck..TWO</h1></div>
-    <div class="carousel-cell"><h1>...and another one right here.TWO</h1></div>
+    {%- comment -%} This loop will have to be re-written once we can pull in more real posts, for right now we're just looping through the same 3 {%- endcomment -%}
+    {%- for post in site.posts limit:9 -%}
+    <div class="carousel-cell">
+      <div class="recent-blog">
+       <span>{{post.publication}}<span/>
+      </div>
+      <div class="recent-image">
+      	<img src="{{post.featured-image}}"/>
+      </div>
+      <div class="featured-other--author">
+        {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
+        {%- if author.size > 0 -%}
+        <div class="featured-other--author-pic">
+          <img src="{{ author[0].image }}" alt="">
+          <a href="{{ author[0].link }}">{{ author[0].name }}</a>
+        </div>
+        {%- else -%}
+        <div class="featured-other--author-pic">
+          <img src="/uploads/author-placeholder.jpg" alt="">
+          <span>{{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}</span>
+        </div>
+        {%- endif -%}
+        <div class="featured-other--author-data">
+          <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
+        </div>
+      </div>
+    </div>
+    {%- endfor -%}
   </div>
   </div>
 

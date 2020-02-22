@@ -135,7 +135,7 @@
 }
 .recent{
   overflow: hidden;
-  height: 34rem;
+  @include clearfix;
   position: relative;
   background-image: url(/assets/images/full-rec.svg);
   background-repeat: no-repeat;
@@ -356,7 +356,6 @@
       margin-left: .5rem;
       font-weight: bold;
       position: relative;
-      top: .1rem;
     }
   }
   &--author-data{
@@ -412,13 +411,68 @@
   } 
 }
 
+// RECENT ARTICLES
+
 .main-carousel{
-  width: 75%;  
+  margin-bottom: 10rem;
+  width: 300px;  
   margin-left: 6rem;
   margin-top: 3rem;
-
+  box-shadow: 0px 2px 60px 0px rgba(160,179,198,0.47);
+  @include responsive(small-screens){
+    width: 400px;
+  }
+  @include responsive(medium-screens){
+      width: 500px;
+  }
+  @include responsive(wide-screens){
+    width: 680px;
+  }
+  @include responsive(ultra-wide-screens){
+    width: 800px;
+  }
+  @include responsive(extra-ultra-wide-screens){
+    width: 1200px;
+  }
   .carousel-cell{
-    width: 40%;
+    width: 142;
+    height: 30rem;
+    background-color: white;
+    margin-right: 1rem;
+    font-size: .8rem;
+    @include responsive(small-screens){
+      width: 192px;
+      height: 25rem;  
+    }
+    @include responsive(medium-screens){
+      width: 242px;
+    }
+    @include responsive(wide-screens){
+      width: 216px;
+    }
+    @include responsive(ultra-wide-screens){
+      width: 256px;
+    }
+    @include responsive(extra-ultra-wide-screens){
+      width: 389.3px;
+    }
+    .recent-blog{
+      padding: .5rem;
+      padding-left: 1rem;
+      background-color: $ofc_slate;
+      color: white;
+      font-weight: 300;
+    }
+    .recent-image{
+      height: 9rem;
+      overflow: hidden;
+      img{ 
+        width: 100%;
+      }
+    }
+    .featured-other--author{
+      font-size: .6rem;
+    }
   }
 }
 
