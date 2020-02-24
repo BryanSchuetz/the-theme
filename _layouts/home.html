@@ -29,12 +29,12 @@ layout: default
           {%- if author -%}
           <div class="featured-zero--author-pic">
             <img src="{{ author[0].image }}" alt="">
-            <a href="{{ author[0].link }}">{{ author[0].name }}</a>
+            <span><a href="{{ author[0].link }}">{{ author[0].name }}</a></span>
           </div>
           {%- else -%}
           <div class="featured-zero--author-pic">
             <img src="/uploads/author-placeholder.jpg" alt="">
-            {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
+            <span>{{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}</span>
           </div>
           {%- endif -%}
           <div class="featured-zero--author-data">
@@ -62,12 +62,12 @@ layout: default
             {%- if author.size > 0 -%}
             <div class="featured-other--author-pic">
               <img src="{{ author[0].image }}" alt="">
-              <a href="{{ author[0].link }}">{{ author[0].name }}</a>
+              <span><a href="{{ author[0].link }}">{{ author[0].name }}</a></span>
             </div>
             {%- else -%}
             <div class="featured-other--author-pic">
               <img src="/uploads/author-placeholder.jpg" alt="">
-              {{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}
+              <span>{{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}</span>
             </div>
             {%- endif -%}
             <div class="featured-other--author-data">
@@ -88,35 +88,40 @@ layout: default
     <h2><span>RECENT</span> <span class="emphasize">ARTICLES</span></h2>
     <hr class="bar">
     </div>
-  <div class="main-carousel">
-    {%- comment -%} This loop will have to be re-written once we can pull in more real posts, for right now we're just looping through the same 3 {%- endcomment -%}
-    {%- for post in site.posts limit:9 -%}
-    <div class="carousel-cell">
-      <div class="recent-blog">
-       <span>{{post.publication}}<span/>
-      </div>
-      <div class="recent-image">
-      	<img src="{{post.featured-image}}"/>
-      </div>
-      <div class="featured-other--author">
-        {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
-        {%- if author.size > 0 -%}
-        <div class="featured-other--author-pic">
-          <img src="{{ author[0].image }}" alt="">
-          <a href="{{ author[0].link }}">{{ author[0].name }}</a>
+  <div class="shadow-wrap">
+    <div class="main-carousel">
+      {%- comment -%} This loop will have to be re-written once we can pull in more real posts, for right now we're just looping through the same 3 {%- endcomment -%}
+      {%- for post in site.posts limit:9 -%}
+      <div class="carousel-cell">
+        <div class="recent-blog">
+        <span>{{post.publication}}<span/>
         </div>
-        {%- else -%}
-        <div class="featured-other--author-pic">
-          <img src="/uploads/author-placeholder.jpg" alt="">
-          <span>{{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}</span>
+        <div class="recent-image">
+          <img src="{{post.featured-image}}"/>
         </div>
-        {%- endif -%}
-        <div class="featured-other--author-data">
-          <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
+        <div class="featured-other--author">
+          {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
+          {%- if author.size > 0 -%}
+          <div class="featured-other--author-pic">
+            <img src="{{ author[0].image }}" alt="">
+            <span><a href="{{ author[0].link }}">{{ author[0].name }}</a></span>
+          </div>
+          {%- else -%}
+          <div class="featured-other--author-pic">
+            <img src="/uploads/author-placeholder.jpg" alt="">
+            <span>{{ post.author | markdownify | remove:"<p>" | remove:"</p>"}}</span>
+          </div>
+          {%- endif -%}
+          <div class="featured-other--author-data">
+            <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
+          </div>
         </div>
+        <h4 class="featured-other--title">{{ post.title | truncate: 84 }}<hr class="bar"></h4>
+          <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
+          <a href="{{ post.url }}" class="button">READ MORE</a>
       </div>
+      {%- endfor -%}
     </div>
-    {%- endfor -%}
   </div>
   </div>
 
