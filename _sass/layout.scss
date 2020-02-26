@@ -427,7 +427,7 @@
 
 // RECENT ARTICLES
 .main-carousel{
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
   width: 300px;  
   margin-left: 6rem;
   margin-top: 3rem;
@@ -507,6 +507,8 @@
       background-color: $ofc_blue;
       font-weight: 600;
       width: 75%;
+      position: absolute;
+      bottom: 3rem;
       @include responsive(ultra-wide-screens){
         width: 40%;
       }
@@ -515,6 +517,14 @@
 
     }
   }
+}
+
+// More News
+
+.more{
+background-color: #F9F9F9;
+height: 12rem;
+padding-top: 3rem;
 }
 // FOOTER
 
