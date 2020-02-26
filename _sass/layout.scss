@@ -522,8 +522,16 @@
 // More News
 
 .more{
-background-color: #F9F9F9;
-height: 12rem;
+  background-color: #F9F9F9;
+  background-image: url(/assets/images/open-rec.svg);
+  background-repeat: no-repeat;
+  background-position-x: 2rem; 
+  background-position-y: 2rem;
+  background-size: 600px;
+  @include responsive(wide-screens){
+    background-size: 900px;
+  }
+height: 43rem;
 padding-top: 3rem;
 }
 // FOOTER
