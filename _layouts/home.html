@@ -129,5 +129,16 @@ layout: default
       <h2><span>MORE</span> <span class="emphasize">NEWS</span></h2>
       <hr class="bar">
     </div>
+    <div class="more-block-wrap">
+      {%- comment -%} @FIXME We'll need to activate this logic when we've got more posts to work with in the site{%- assign morepost = site.posts | were_exp:"pos","post.weight < 8" -%} {%- endcomment -%}
+      {%- for post in site.posts -%}
+        <div class="more-block">
+          <hr class="bar">
+          <h3 class="more-title">{{ post.title }}</h3>
+          <div class="more-details"><span class="more-blog">{{ post.publication }}</span><span class="more-time"><svg class="clock-icon" viewBox="0 0 110 110" preserveAspectRatio="xMinYMax meet"><use xlink:href="#clock"></use></svg> {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read
+          </span> </div>
+        </div>
+      {%- endfor -%}
+    </div>
   </div>
 

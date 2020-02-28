@@ -539,6 +539,55 @@
   h2{
     font-size: 2.1rem;
   }
+  .more-block-wrap{
+    padding:  0 2rem;
+    @include clearfix;
+  }
+  .more-block{
+    @include clearfix;
+    width: 80%;
+    margin-left: 10%;
+    float: right;
+    margin-bottom: 2rem;
+    @include responsive(medium-screens){
+      width: 45%;
+      min-height: 9rem;
+    }
+    @include responsive(wide-screens){
+      width: 30%;
+      margin-left: 3%;
+    }
+    @include responsive(ultra-wide-screen){
+      width: 20%;
+      margin-left: 5%;
+    }
+    .bar{
+    width: 1.1875rem; 
+    border: 0;
+    border-bottom: 0.225rem solid #768496;
+    margin-bottom: 1rem;
+    }
+  }
+
+  .more-title{
+
+  }
+  .more-details{
+    .more-blog{
+      font-weight: 600;
+      display: block;
+      color: $link_blue;
+    }
+    .more-time{
+      font-size: .8rem;
+      display: block;
+      .clock-icon{
+        width: 12px;
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
 }
 
 
