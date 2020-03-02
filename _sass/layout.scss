@@ -550,7 +550,7 @@
     float: right;
     margin-bottom: 2rem;
     @include responsive(medium-screens){
-      width: 45%;
+      width: 40%; 
       min-height: 9rem;
     }
     @include responsive(wide-screens){
