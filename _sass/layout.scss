@@ -186,6 +186,7 @@
   &--title{
     margin-left: 5rem;
     margin-top: 4rem;
+    width: 75%;
     @include responsive(wide-screens){
       margin-top: 5rem;
     }
@@ -531,7 +532,6 @@
   @include responsive(wide-screens){
     background-size: 900px;
   }
-  height: 43rem;
   padding-top: 3rem;
   .featured--title{
     margin-top: 1rem;
@@ -549,9 +549,9 @@
     margin-left: 10%;
     float: right;
     margin-bottom: 2rem;
+    min-height: 16rem;
     @include responsive(medium-screens){
       width: 40%; 
-      min-height: 9rem;
     }
     @include responsive(wide-screens){
       width: 30%;
@@ -562,7 +562,7 @@
       margin-left: 5%;
     }
     .bar{
-    width: 1.1875rem; 
+    width: 1.1875rem;
     border: 0;
     border-bottom: 0.225rem solid #768496;
     margin-bottom: 1rem;

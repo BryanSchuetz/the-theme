@@ -91,7 +91,8 @@ layout: default
   <div class="shadow-wrap">
     <div class="main-carousel">
       {%- comment -%} This loop will have to be re-written once we can pull in more real posts, for right now we're just looping through the same 3 {%- endcomment -%}
-      {%- for post in site.posts limit:9 -%}
+      {%- assign recent = site.posts -%}
+      {%- for post in recent limit:6 -%}
       <div class="carousel-cell">
         <div class="recent-blog">
         <span>{{post.publication}}<span/>
@@ -118,8 +119,8 @@ layout: default
         </div>
         <h4 class="featured-other--title">{{ post.title | truncate: 84 }}<hr class="bar"></h4>
           <p class="featured-other--summary">{{ post.summary | markdownify | remove:'<p>' | rmeove:'</p>' | truncate: 125}}</p>
-          <a href="{{ post.url }}" class="button">READ MORE</a>
-      </div>
+          <a  href="{{ post.url }}" class="button">READ MORE</a>
+      </div> 
       {%- endfor -%}
     </div>
   </div>
@@ -131,10 +132,11 @@ layout: default
     </div>
     <div class="more-block-wrap">
       {%- comment -%} @FIXME We'll need to activate this logic when we've got more posts to work with in the site{%- assign morepost = site.posts | were_exp:"pos","post.weight < 8" -%} {%- endcomment -%}
-      {%- for post in site.posts -%}
+      {%- assign more = site.posts | where_exp:"post", "post.weight < 8" -%}
+      {%- for post in more limit:9 -%}
         <div class="more-block">
           <hr class="bar">
-          <h3 class="more-title">{{ post.title }}</h3>
+          <h3 class="more-title">{{ post.title | truncate:85 }}</h3>
           <div class="more-details"><span class="more-blog">{{ post.publication }}</span><span class="more-time"><svg class="clock-icon" viewBox="0 0 110 110" preserveAspectRatio="xMinYMax meet"><use xlink:href="#clock"></use></svg> {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read
           </span> </div>
         </div>
