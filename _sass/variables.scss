@@ -31,6 +31,7 @@ $width-medium: 600px; //8bits
 $width-wide: 800px; //10bits
 $width-ultra-wide: 960px; //12bits
 $width-extra-ultra-wide: 1400px;
+$super-wide: 1830px;
 
 $condensed-titles: proxima-nova-condensed;
 
@@ -63,6 +64,11 @@ $condensed-titles: proxima-nova-condensed;
   }
     @else if $width == extra-ultra-wide-screens{
       @media screen and (min-width: $width-extra-ultra-wide){
+        @content;
+      }
+    }
+    @else if $width == super-wide-screens{
+      @media screen and (min-width: $super-wide){
         @content;
       }
     }

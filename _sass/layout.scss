@@ -156,6 +156,9 @@
   @include responsive(extra-ultra-wide-screens){
     background-size: 1100px;
   }
+  @include responsive(super-wide-screens){
+    background-size: 1500px;
+  }
   &--title{
     margin-left: 5rem;
     margin-top: 4rem;
@@ -192,6 +195,9 @@
   }
   @include responsive(extra-ultra-wide-screens){
     background-size: 1100px;
+  }
+  @include responsive(super-wide-screens){
+    background-size: 1500px;
   }
   &--title{
     margin-left: 5rem;
@@ -323,6 +329,9 @@
   }
   @include responsive(extra-ultra-wide-screens){
     background-size: 1100px;
+  }
+  @include responsive(super-wide-screens){
+    background-size: 1500px;
   }
   width: 100%;
   position: relative;
@@ -556,6 +565,9 @@
   }
   @include responsive(extra-ultra-wide-screens){
     background-size: 1100px;
+  }
+  @include responsive(super-wide-screens){
+    background-size: 1500px;
   }
   padding-top: 3rem;
   .featured--title{
