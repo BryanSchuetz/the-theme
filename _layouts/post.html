@@ -10,10 +10,10 @@ layout: default
       <div class="summary-details">
         <p class="details-time">{% capture time %}{{ page.content | reading_time }}{% endcapture %} {{ time }} min read</p>
         {%- assign author = site.data.experts | where_exp:"expert", "expert.name == page.author" -%}
-          {%- if author -%}
+          {%- if author > 0  -%}
           <p class="details-author">By <a href="{{author[0].link}}">{{author[0].name}}</a></p>
           {%- else -%}
-          <p class="details-author">{{ page.author | markdownify | remove:"<p>" | remove:"</p>"}}</p>
+          <p class="details-author">By {{ page.author | markdownify | remove:"<p>" | remove:"</p>"}}</p>
           {%- endif -%}
         <p>Tags: {% for tag in page.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">•</span> {% endunless %} {% endfor %}</p>
       </div>

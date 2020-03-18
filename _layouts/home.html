@@ -26,7 +26,7 @@ layout: default
       <div class="featured-zero--post">
         <div class="featured-zero--author">
           {%- assign author = site.data.experts | where_exp:"expert", "expert.name == post.author" -%}
-          {%- if author -%}
+          {%- if author > 0 -%}
           <div class="featured-zero--author-pic">
             <img src="{{ author[0].image }}" alt="">
             <span><a href="{{ author[0].link }}">{{ author[0].name }}</a></span>
