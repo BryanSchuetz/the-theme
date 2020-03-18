@@ -517,6 +517,9 @@
       background-color: $ofc_slate;
       color: white;
       font-weight: 300;
+      span{
+        text-transform: uppercase;
+      }
     }
     .recent-image{
       height: 9rem;
@@ -642,6 +645,70 @@
   }
 }
 
+
+// POSTSTYLES
+
+.snakke-bar {
+  /* Required style */
+  position: fixed;
+  top: 91px;
+  left: 0;
+  transition: width .3s ease;
+  /* Below, your bar style */
+  height: 5px;
+  background: #92BADC;
+  z-index: 900;
+  @include responsive(small-screens){
+    top: 91px;
+  }
+  @include responsive(medium-screens){
+    top: 114px;
+  }
+  @include responsive(wide-screens){
+    top: 129px;
+  }
+}
+.post-wrapper{
+  padding-top: 5px;
+  @include clearfix;
+}
+.post-image{
+  width: 50%;
+  height: 20rem;
+    background-size: cover; 
+    @include responsive(wide-screens){
+      display: block;
+      width: 50%;
+      float: right;
+      height: 35rem;
+    }
+  background-size: cover;
+}
+.post-summary{
+  width: 50%;
+  float: right;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  @include responsive(wide-screens){
+    padding-top: 4rem;
+    padding-left: 6rem;
+  }
+  .summary-publication{
+    color: $ofc_slate;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .summary-details{
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 1px solid $ofc_blue;
+    p{
+      margin-bottom: 0px;
+      font-size: .9rem;
+    }
+  }
+}
 
 // FOOTER
 
