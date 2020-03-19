@@ -2,7 +2,8 @@
 layout: default
 ---
   <div class="post-wrapper">
-    <div class="post-summary">
+    <div class="lead-wrap">
+      <div class="post-summary">
       <h3 class="summary-publication">{{ page.publication }}</h3>
       <h1 class ="summary-title">{{ page.title }}
         <hr class="bar">
@@ -10,17 +11,21 @@ layout: default
       <div class="summary-details">
         <p class="details-time">{% capture time %}{{ page.content | reading_time }}{% endcapture %} {{ time }} min read</p>
         {%- assign author = site.data.experts | where_exp:"expert", "expert.name == page.author" -%}
-          {%- if author > 0  -%}
+          {%- if author > 0 -%}
           <p class="details-author">By <a href="{{author[0].link}}">{{author[0].name}}</a></p>
           {%- else -%}
           <p class="details-author">By {{ page.author | markdownify | remove:"<p>" | remove:"</p>"}}</p>
           {%- endif -%}
-        <p>Tags: {% for tag in page.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">•</span> {% endunless %} {% endfor %}</p>
+        <p>Tags: {% for tag in page.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">/</span> {% endunless %} {% endfor %}</p>
       </div>
       <div class="summary-summary">
       {{ page.summary }}
       </div>
     </div>
     <div class="post-image" style="background-image: url({{ page.featured-image }})"></div>
-
+    </div>
+    
+    <div class="post-body">
+      {{content}}
+    </div>
   </div> 

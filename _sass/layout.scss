@@ -668,9 +668,13 @@
     top: 129px;
   }
 }
+.lead-wrap{
+  @include clearfix;
+}
 .post-wrapper{
   padding-top: 5px;
   @include clearfix;
+  background-color: #F9F9F9;
 }
 .post-image{
   width: 50%;
@@ -699,17 +703,28 @@
     text-transform: uppercase;
     margin-bottom: 1.5rem;
   }
+  .summary-title{
+    margin-bottom: 2rem;
+  }
   .summary-details{
     padding-left: 1.5rem;
     margin-bottom: 2rem;
     border-left: 1px solid $ofc_blue;
     p{
       margin-bottom: 0px;
-      font-size: .9rem;
+      font-size: .8rem;
     }
   }
 }
-
+.post-body{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 3rem;
+  img{
+    width: 100%;
+  }
+}
 // FOOTER
 
 .footer-flat--logo{

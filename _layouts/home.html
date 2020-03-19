@@ -38,7 +38,7 @@ layout: default
           </div>
           {%- endif -%}
           <div class="featured-zero--author-data">
-            <p>Tags: {% for tag in post.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">•</span> {% endunless %} {% endfor %}</p>
+            <p>Tags: {% for tag in post.tags %}<a href=" ">{{ tag }}</a> {% unless forloop.last %}<span class="seperator">/</span> {% endunless %} {% endfor %}</p>
             <p>{{ post.date | date: '%m/%d' }} | {% capture time %}{{ post.content | reading_time }}{% endcapture %} {{ time }} min read</p>
           </div>
         </div>

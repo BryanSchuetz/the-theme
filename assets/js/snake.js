@@ -41,7 +41,7 @@
   }
 
   function getPercentageScroll(scrollPos) {
-    return Math.round((scrollPos / bodyHeight) * 240)
+    return Math.round((scrollPos / bodyHeight) * 100)
   }
 
   function blockScroll() {
