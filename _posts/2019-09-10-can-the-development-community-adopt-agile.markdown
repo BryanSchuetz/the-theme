@@ -43,11 +43,12 @@ At the customer level, many of us struggle with defining a key question: Who is 
 
 In developing countries, these customers (whether governments, civil society, small businesses, or poor and low-income households) are becoming more discerning; they increasingly have access to information, improved education, and technology, especially mobile technology. At the field level, the development community increasingly recognizes this welcome development and has shifted its approach. For instance, in the early days of microcredit, an array of microfinance institutions (MFI) provided pretty much the same type of working capital loan. Today, providers have felt the pinch of increased competition. MFIs, banks, and other institutions—including mobile telephone operators—have innovated on product types and delivery in hopes of better catering to customers and winning their business.
 
+
+![Brigit-ef4acd.jpg](/uploads/Denning.jpg){:.float-right}`Brigit Helms shares lessons learned from working for multiple clients. Photo courtesy: OnFrontiers.`{:.float-right}
+
 In line with the typical implementation model, projects on the ground are often run by small, nimble teams. The closer to the field, it seems, the better our small teams of development practitioners can work with customers and end users to iterate solutions that offer increasingly better value. And donors can hardwire agile into project design. For instance, USAID’s [Transparent, Effective, and Accountable Municipalities (TEAM)](https://www.dai.com/our-work/projects/kosovo-transparent-effective-and-accountable-municipalities-team) project in Kosovo embedded the Agency’s [Collaborating, Learning and Adapting (CLA)](https://usaidlearninglab.org/qrg/understanding-cla-0) model into the fabric of the project. Alongside more traditional indicators, USAID directly evaluates the project’s success in adapting to changing circumstances and seizing emerging opportunities. 
 
 Some donor agencies have incorporated small, iterative teams into their core processes. USAID regularly engages partners in co-creating solutions, inviting interdisciplinary teams to design and implement projects. The small team at the [INVEST](https://www.dai.com/our-work/projects/worldwide-the-invest-project) project helped the Agency usher in some important procurement reforms, enabling the Agency to access specialized expertise not normally tapped for development projects. Going back and forth with USAID, the INVEST project landed on a process that makes transaction advisors and investment bankers available to drive private capital into high-priority sectors—a process measured in weeks, not months or years.
-
-![Brigit-ef4acd.jpg](/uploads/Denning.jpg)`Brigit Helms shares lessons learned from working for multiple clients. Photo courtesy: OnFrontiers.`
 
 While examples of agile teams dot the development landscape, and many organizations—donor agencies, multilaterals, implementing partners—are testing agile models in specific areas such as proposal writing, no single entity has managed to achieve the “nirvana” described by Denning where entire organizations adopt the model.
 
@@ -56,6 +57,10 @@ While examples of agile teams dot the development landscape, and many organizati
 And in our industry, project work is often seen as the pinnacle of the profession, the people who lead it held in high esteem—so it shouldn’t go against the grain to institutionalize a principle of learning from the outside in. 
 
 Beyond learning from our colleagues in the field, we also need to ensure that our procurement and our monitoring, evaluation, and learning processes are up to the task of identifying and rewarding superior performance. If agile organizations really do outperform their peers, then they will rise to the top in development as in other sectors—but only if our playing field is level and transparent. For development funders especially, that means demanding better data and analytics, reducing barriers to entry, removing market-distorting practices, eliminating anti-competitive procurement vehicles, and so on.
+
+<aside> 
+<h3>Download the new white paper Coffe Cloud: Precision Ag at the Touch of the Button in <a href="">English </a> or <a href="">Spanish</a></h3>  
+</aside>
 
 Finally, we need to strike the right balance between bureaucracy and agility. The leaders of development organizations are often the stewards of taxpayer funds, so the burden of public accountability is necessarily high—particularly in frontier settings. Set the compliance bar too high, and we will fail to give appropriately free rein to our innovators in the field. Set it too low and standards will slip, abuses will proliferate, and confidence in our aid programs will decline.
 

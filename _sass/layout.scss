@@ -729,7 +729,27 @@
     width: 200%;
     left: -50%;
   }
+  img.float-left{
+    @include responsive(ultra-wide-screens){
+      width: 40%;
+      float: left;
+      margin: 0 1rem 0 0;
+      position: relative;
+      top: .4rem
+    }
+  }
+  img.float-right{
+    @include responsive(ultra-wide-screens){
+      width: 40%;
+      float: right;
+      margin: 0 0 0 1rem;
+      position: relative;
+      top: .4rem
+    }
+  }
+
   code{
+    display: block;
     text-align: center;
     padding: .7rem;
     background-color: #B5BCC5;
@@ -740,6 +760,24 @@
     position: relative;
     width: 200%;
     left: -50%;
+  }
+  code.float-left{
+    @include responsive(ultra-wide-screens){
+      width: 40%;
+      float: left;
+      margin: 0 1rem .5rem 0;
+      clear: left; 
+    }
+
+  }
+  code.float-right{
+    @include responsive(ultra-wide-screens){
+      width: 40%;
+      float: right;
+      margin: 0 0 .5rem 1rem;
+      clear: right; 
+    }
+
   }
   blockquote{
   display: block;
@@ -761,6 +799,12 @@
     @include responsive(extra-ultra-wide-screens){
       background-position: left 15% top 1.2rem, right 12% top 2.3rem;
     }
+  }
+  aside{
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid $ofc_lightblue;
+    border-bottom: 1px solid $ofc_lightblue;
   }
 }
 // FOOTER
