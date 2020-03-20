@@ -25,7 +25,7 @@ In "[The Age of Agile](https://www.amazon.com/Age-Agile-Smart-Companies-Transfor
 
 At a recent panel discussion, hosted and moderated by [OnFrontiers](https://onfrnt.rs/DAI_article), I joined Denning and a group of development leaders representing the U.S. Agency for International Development (USAID), the World Bank, and the Millennium Challenge Corporation to discuss just how well the agile model fits our sector. The punchline seems to be: yes, and no. The closer we get to projects in the field and the farther we get from our headquarters, the more likely it is that agile can flourish.
 
-![Denning.jpg](/uploads/Denning.jpg)`Steve Denning speaks on agile management. Photo courtesy: OnFrontiers.`
+![Denning.jpg](/uploads/Denning.jpg){:.full-screen}`Steve Denning speaks on agile management. Photo courtesy: OnFrontiers.`{:.full-screen}
 
 ### What is Agile?
 
@@ -47,11 +47,13 @@ In line with the typical implementation model, projects on the ground are often 
 
 Some donor agencies have incorporated small, iterative teams into their core processes. USAID regularly engages partners in co-creating solutions, inviting interdisciplinary teams to design and implement projects. The small team at the [INVEST](https://www.dai.com/our-work/projects/worldwide-the-invest-project) project helped the Agency usher in some important procurement reforms, enabling the Agency to access specialized expertise not normally tapped for development projects. Going back and forth with USAID, the INVEST project landed on a process that makes transaction advisors and investment bankers available to drive private capital into high-priority sectors—a process measured in weeks, not months or years.
 
-![Brigit-ef4acd.jpg](/uploads/Brigit-ef4acd.jpg)`Brigit Helms shares lessons learned from working for multiple clients. Photo courtesy: OnFrontiers.`
+![Brigit-ef4acd.jpg](/uploads/Denning.jpg)`Brigit Helms shares lessons learned from working for multiple clients. Photo courtesy: OnFrontiers.`
 
 While examples of agile teams dot the development landscape, and many organizations—donor agencies, multilaterals, implementing partners—are testing agile models in specific areas such as proposal writing, no single entity has managed to achieve the “nirvana” described by Denning where entire organizations adopt the model.
 
-Agile is a mindset as much as anything else, and the development community, like other sectors, struggles to shift wholesale to that mindset. Unlike some sectors, though, our community often operates through a decentralized, project-based model that allows local teams to serve as the laboratories of agility. And in our industry, project work is often seen as the pinnacle of the profession, the people who lead it held in high esteem—so it shouldn’t go against the grain to institutionalize a principle of learning from the outside in. 
+> Agile is a mindset as much as anything else, and the development community, like other sectors, struggles to shift wholesale to that mindset. Unlike some sectors, though, our community often operates through a decentralized, project-based model that allows local teams to serve as the laboratories of agility. 
+
+And in our industry, project work is often seen as the pinnacle of the profession, the people who lead it held in high esteem—so it shouldn’t go against the grain to institutionalize a principle of learning from the outside in. 
 
 Beyond learning from our colleagues in the field, we also need to ensure that our procurement and our monitoring, evaluation, and learning processes are up to the task of identifying and rewarding superior performance. If agile organizations really do outperform their peers, then they will rise to the top in development as in other sectors—but only if our playing field is level and transparent. For development funders especially, that means demanding better data and analytics, reducing barriers to entry, removing market-distorting practices, eliminating anti-competitive procurement vehicles, and so on.
 

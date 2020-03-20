@@ -647,17 +647,14 @@
 
 
 // POSTSTYLES
-
-.snakke-bar {
-  /* Required style */
-  position: fixed;
-  top: 91px;
-  left: 0;
-  transition: width .3s ease;
-  /* Below, your bar style */
+#progressbarJS {
+  background-color: #92BADC;
   height: 5px;
-  background: #92BADC;
-  z-index: 900;
+  position: fixed;
+  top:  91px;
+  left: 0;
+  width:  0%;
+  z-index: 9999;
   @include responsive(small-screens){
     top: 91px;
   }
@@ -668,13 +665,14 @@
     top: 129px;
   }
 }
+
 .lead-wrap{
   @include clearfix;
+  background-color: #F2F2F2;
 }
 .post-wrapper{
   padding-top: 5px;
   @include clearfix;
-  background-color: #F9F9F9;
 }
 .post-image{
   width: 50%;
@@ -693,7 +691,7 @@
   float: right;
   padding-top: 2rem;
   padding-left: 3rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
   @include responsive(wide-screens){
     padding-top: 4rem;
     padding-left: 6rem;
@@ -720,9 +718,49 @@
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 3rem;
+  padding-top: 3rem; 
+  background-color: #F9F9F9;
   img{
     width: 100%;
+  }
+  img.full-screen{
+    display: block;
+    position: relative;
+    width: 200%;
+    left: -50%;
+  }
+  code{
+    text-align: center;
+    padding: .7rem;
+    background-color: #B5BCC5;
+    font-weight: 300;
+  }
+  code.full-screen{
+    display: block;
+    position: relative;
+    width: 200%;
+    left: -50%;
+  }
+  blockquote{
+  display: block;
+  width: 200%;
+  position: relative;
+  left: -50%;
+  padding: 2rem 40%;
+  margin-bottom: 1rem;
+  background-color: $ofc_slate;
+  color: $ofc_lightgray;
+  background-image: url(../images/blockquote.svg), url(../images/blockquote-right.svg);
+  background-size: 3rem, 6rem;
+  background-repeat: no-repeat;
+  background-position: left 10% top 1.2rem, right 5% top 2.3rem;
+    strong{
+      color: whitesmoke;
+      font-weight: bold;
+    }
+    @include responsive(extra-ultra-wide-screens){
+      background-position: left 15% top 1.2rem, right 12% top 2.3rem;
+    }
   }
 }
 // FOOTER
