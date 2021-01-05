@@ -10,7 +10,13 @@
 .wrapper{
   background-color: #F9F9F9;
 }
-
+.inner-wrap.blogs-block{
+  @include responsive(super-wide-screens){
+    max-width: 1800px;
+    margin: auto;
+    border: 1px solid lighten($ofc-slate,75);
+  }
+}
 .blogs-block{
   @include responsive(small-screens){
     margin-top: 92px;
